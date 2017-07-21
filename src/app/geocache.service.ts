@@ -20,5 +20,10 @@ export class GeocacheService {
   getGeocacheById(geocacheId: string){
     return this.database.object('geocaches/' + geocacheId);
   }
+  updateGeocache(localUpdatedGeocache){
+    var geocacheEntryInFirebase = this.getGeocacheById(localUpdatedGeocache.$key);
+    geocacheEntryInFirebase.update({geocache: localUpdatedGeocache.geocache, address: localUpdatedGeocache.address, gps: localUpdatedGeocache.gps, creator: localUpdatedGeocache.creator});
+  }
+
 
 }
