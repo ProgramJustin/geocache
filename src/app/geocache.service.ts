@@ -14,4 +14,11 @@ export class GeocacheService {
     return this.geocaches;
   }
 
+  addGeocaches(newGeocache: Geocache) {
+    this.geocaches.push(newGeocache);
+  }
+  getGeocacheById(geocacheId: string){
+    return this.database.object('geocaches/' + geocacheId);
+  }
+
 }
