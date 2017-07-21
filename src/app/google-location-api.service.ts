@@ -9,6 +9,6 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 @Injectable()
 export class GoogleLocationApiService {
 
-  constructor() { }
+  constructor(private http: Http, private geocacheService: GeocacheService) { }
 
 }
