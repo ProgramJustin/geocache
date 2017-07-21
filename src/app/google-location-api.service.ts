@@ -13,8 +13,11 @@ export class GoogleLocationApiService {
 
   getGpsCoordinates(address: string) {
     return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?address="+address+"&key="+geoKey).subscribe(response => {
-    var check = response.json().results[0].geometry.bounds.northeast.lat;
-    console.log(check);
+
+    var lat = response.json().results[0].geometry.location.lat;
+    var lng = response.json().results[0].geometry.location.lng;
+    var location = lat + " " + lng;
+
   });
 }
 

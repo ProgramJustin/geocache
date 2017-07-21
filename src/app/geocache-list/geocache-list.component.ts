@@ -13,11 +13,11 @@ export class GeocacheListComponent {
 
   constructor(private geocacheService: GeocacheService) { }
 
-  saveGeocache(geocache: string, address: string, gps: string, creator: string) {
-    // let newGeocache: Geocache = new Geocache(geocache, address, gps, creator);
-    // this.geocacheService.addGeocaches(newGeocache);
-    // alert(newGeocache);
-  }
+  // saveGeocache(geocache: string, address: string, gps: string, creator: string) {
+  //   let newGeocache: Geocache = new Geocache(geocache, address, gps, creator);
+  //   this.geocacheService.addGeocaches(newGeocache);
+  //   alert(newGeocache);
+  // }
 
 
 

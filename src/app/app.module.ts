@@ -15,6 +15,7 @@ import { EditGeocacheComponent } from './edit-geocache/edit-geocache.component';
 import { GeocacheDetailComponent } from './geocache-detail/geocache-detail.component';
 import { GeocacheListComponent } from './geocache-list/geocache-list.component';
 import { GeocacheFormComponent } from './geocache-form/geocache-form.component';
+import { UserGeocacheListComponent } from './user-geocache-list/user-geocache-list.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -31,7 +32,8 @@ export const firebaseConfig = {
     EditGeocacheComponent,
     GeocacheDetailComponent,
     GeocacheListComponent,
-    GeocacheFormComponent
+    GeocacheFormComponent,
+    UserGeocacheListComponent
   ],
   imports: [
     BrowserModule,

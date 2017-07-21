@@ -1,3 +1,5 @@
-<p>
-  geocache-list works!
-</p>
+
+<div *ngFor="let geocache of childGeocaches.geocaches;">
+
+  <button (click)="saveGeocache(geoName, geocacheAddress, results[0].geometry.location.lat, geoCreator)">Save Photo</button>
+</div>
