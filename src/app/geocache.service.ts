@@ -24,6 +24,9 @@ export class GeocacheService {
     var geocacheEntryInFirebase = this.getGeocacheById(localUpdatedGeocache.$key);
     geocacheEntryInFirebase.update({geocache: localUpdatedGeocache.geocache, address: localUpdatedGeocache.address, gps: localUpdatedGeocache.gps, creator: localUpdatedGeocache.creator});
   }
-
+deleteGeocache(localUpdatedGeocacheToDelete) {
+  var geocacheEntryInFirebase = this.getGeocacheById(localUpdatedGeocacheToDelete.$key);
+  geocacheEntryInFirebase.remove();
+}
 
 }
