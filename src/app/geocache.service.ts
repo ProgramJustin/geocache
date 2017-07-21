@@ -10,5 +10,8 @@ export class GeocacheService {
   constructor(private database: AngularFireDatabase) {
     this.geocaches = database.list('geocaches');
   }
+  getGeocache(){
+    return this.geocaches;
+  }
 
 }
