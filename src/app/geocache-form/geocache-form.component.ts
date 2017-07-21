@@ -9,7 +9,8 @@ import { GeocacheService } from '../geocache.service';
 @Component({
   selector: 'app-geocache-form',
   templateUrl: './geocache-form.component.html',
-  styleUrls: ['./geocache-form.component.css']
+  styleUrls: ['./geocache-form.component.css'],
+  providers: [GoogleLocationApiService, GeocacheService]
 })
 export class GeocacheFormComponent implements OnInit {
 
