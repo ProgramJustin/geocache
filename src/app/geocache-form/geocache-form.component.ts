@@ -14,9 +14,18 @@ import { GeocacheService } from '../geocache.service';
 })
 export class GeocacheFormComponent implements OnInit {
 
-  constructor() { }
+  geocaches: any[]=null;
+  noGeocaches: boolean=false;
 
+  constructor(private googlelocationapi: GoogleLocationApiService) { }
   ngOnInit() {
   }
 
-}
+  getGeocacheAddress(address){
+    var results = this.googlelocationapi.getGpsCoordinates(address);
+    console.log(address)
+    // alert("The images from " + date + " taken by the " + camera + " camera have been saved to the database.")
+  }
+
+
+  }
