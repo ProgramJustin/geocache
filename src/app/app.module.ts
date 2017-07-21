@@ -15,14 +15,12 @@ import { EditGeocacheComponent } from './edit-geocache/edit-geocache.component';
 import { GeocacheDetailComponent } from './geocache-detail/geocache-detail.component';
 import { GeocacheListComponent } from './geocache-list/geocache-list.component';
 
-
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
   authDomain: masterFirebaseConfig.authDomain,
   databaseURL: masterFirebaseConfig.databaseURL,
   storageBucket: masterFirebaseConfig.storageBucket
 };
-
 
 @NgModule({
   declarations: [
