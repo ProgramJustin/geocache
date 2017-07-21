@@ -63,12 +63,12 @@
   </div>
   <button (click)="getGeocacheAddress(geocacheAddress.value)">Get Address</button>
 </form>
-app-geocache-list
+
 
 <div *ngIf="geocaches && !noGeocaches">
   <app-geocache-list [childGeocaches]="geocaches"></app-geocache-list>
 </div>
 
 <div *ngIf="noGeocaches">
-    <h3>{{geocacheAddress.value}}  address</h3>
+    <h3>{{geocacheAddress.value}}</h3>
 </div>

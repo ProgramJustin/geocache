@@ -11,10 +11,12 @@ export class GoogleLocationApiService {
 
   constructor(private http: Http, private geocacheService: GeocacheService) {}
 
-  getGpsCoordinates(address:string) {
-    return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=" +geoKey);
-
-  }
+  getGpsCoordinates(address: string) {
+    return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?address="+address+"&key="+geoKey).subscribe(response => {
+    var check = response.json().results[0].geometry.bounds.northeast.lat;
+    console.log(check);
+  });
+}
 
   getPhysicalAddress(lat:string, lng:string) {
     return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=" +geoKey);
