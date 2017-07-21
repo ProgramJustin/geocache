@@ -9,6 +9,12 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 @Injectable()
 export class GoogleLocationApiService {
 
-  constructor(private http: Http, private geocacheService: GeocacheService) { }
+  constructor(private http: Http, private geocacheService: GeocacheService) {}
+
+  getByGpsCoordinates(address:string) {
+    return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=YOUR" +geoKey);
+
+  }
+  // https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=YOUR_AIzaSyBZs-eCmiE8cTfk8vbSpX3YMEQTSjajCHY
 
 }
