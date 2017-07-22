@@ -21,8 +21,10 @@ export class GeocacheFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  getGeocacheAddress(address){
-    this.googlelocationapi.getGpsCoordinates(address);
+  addNewGeocache(address){
+    let coordinate = this.googlelocationapi.getGpsCoordinates(address);
+    // let newGeocache: Geocache = new Geocache(name, address, coordinate, creator);
+    console.log(coordinate);
 
   }
 
