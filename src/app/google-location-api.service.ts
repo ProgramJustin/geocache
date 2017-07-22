@@ -8,20 +8,27 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 
 @Injectable()
 export class GoogleLocationApiService {
+  geocaches: FirebaseListObservable<any[]>;
 
   constructor(private http: Http, private geocacheService: GeocacheService) {}
 
-  getGpsCoordinates(address: string) {
+  getGpsCoordinates(address) {
     return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?address="+address+"&key="+geoKey).subscribe(response => {
 
     var lat = response.json().results[0].geometry.location.lat;
     var lng = response.json().results[0].geometry.location.lng;
     var location = lat + " " + lng;
+    console.log(response.json().results[0].formatted_address);
+    var newGeocache: Geocache = new Geocache(lat, lng, lng, lng);
+
+    // this.geocaches.push(newGeocache);
+    console.log(newGeocache);
+
+
+
+
 
   });
 }
 
-  getPhysicalAddress(lat:string, lng:string) {
-    return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=" +geoKey);
-  }
 }

@@ -17,15 +17,28 @@ export class GeocacheFormComponent implements OnInit {
   geocaches: any[]=null;
   noGeocaches: boolean=false;
 
-  constructor(private googlelocationapi: GoogleLocationApiService){ }
+    constructor(private googlelocationapi: GoogleLocationApiService, private geocacheService: GeocacheService){ }
   ngOnInit() {
   }
 
-  addNewGeocache(address){
-    let coordinate = this.googlelocationapi.getGpsCoordinates(address);
-    // let newGeocache: Geocache = new Geocache(name, address, coordinate, creator);
-    console.log(coordinate);
+  saveGeocacheAddress(geo: GeocacheService,address){
+    this.googlelocationapi.getGpsCoordinates(address);
 
+
+
+  }
+  getGeocachesAdress(address: string) {
+
+    // this.noGeocaches = false;
+    // this.googlelocationapi.getGpsCoordinates(address).subscribe(response => {
+    //   if(response.json().geocaches.length > 0)
+    // {
+    //   this.geocaches = response.json();
+    // }
+    // else {
+    //   this.noGeocaches = true;
+    // }
+    // });
   }
 
 
