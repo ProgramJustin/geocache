@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { GeocacheService } from '../geocache.service';
 import { Geocache } from '../geocache.model'
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-geocache-list',
@@ -9,17 +11,16 @@ import { Geocache } from '../geocache.model'
   providers: [ GeocacheService ]
 })
 export class GeocacheListComponent {
-  @Input() childGeocaches;
+  geocaches: FirebaseListObservable<any[]>;
 
-  constructor(private geocacheService: GeocacheService) { }
+  constructor(private router: Router, private geocacheService: GeocacheService) {}
 
-  // saveGeocache(geocache: string, address: string, gps: string, creator: string) {
-  //   let newGeocache: Geocache = new Geocache(geocache, address, gps, creator);
-  //   this.geocacheService.addGeocaches(newGeocache);
-  //   alert(newGeocache);
-  // }
+  ngOnInit(){
+    this.geocaches = this.geocacheService.getGeocaches();
+  }
 
-
-
+  getDetailedPage(clickedGeocache){
+    this.router.navigate(['geocaches', clickedGeocache.$key]);
+  }
 
 }

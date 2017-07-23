@@ -10,7 +10,7 @@
     <input type=address #geoCreator>
   </div>
     <label for="camera">Camera</label>
-  <button (click)="saveGeocacheAddress(geoName.value,geocacheAddress.value, geoCreator.value); geoName.value=''; geocacheAddress.value='';geoCreator.value=''>Get Address</button>
+  <button (click)="submitForm(geoName.value,geocacheAddress.value, geoCreator.value); geoName.value=''; geocacheAddress.value='';geoCreator.value=''">Get Address</button>
 </form>
 
 <div *ngIf="geocaches && !noGeocaches">

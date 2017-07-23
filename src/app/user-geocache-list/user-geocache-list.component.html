@@ -1,8 +1,1 @@
 <h1>Your Saved Geocaches:</h1>
-<!-- <h2> From {{childPhotos.photos[0].earth_date}} by the {{childPhotos.photos[0].camera.name}}</h2> -->
-<div *ngFor="let geocache of savedGeocaches | async">
-
-  <p>{{geocache.location}}</p>
-  <button (click)="deleteGeocache(geocache)">Delete Geocache</button>
-</div>
-<a routerLink=''>Back to Search Page</a>

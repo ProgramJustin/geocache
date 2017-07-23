@@ -14,8 +14,6 @@ import { GeocacheService } from '../geocache.service';
 })
 export class GeocacheFormComponent implements OnInit {
 
-  geocaches: any[]=null;
-  noGeocaches: boolean=false;
 
     constructor(private googlelocationapi: GoogleLocationApiService, private geocacheService: GeocacheService){ }
   ngOnInit() {
@@ -33,10 +31,9 @@ export class GeocacheFormComponent implements OnInit {
       console.log(response.json().results[0].formatted_address);
       var newGeocache: Geocache = new Geocache(geoName, address, location, creator);
 
-      this.albumService.addAlbum(newAlbum);
+      this.geocacheService.addGeocaches(newGeocache);
 
       // this.geocaches.push(newGeocache);
-      console.log(newAlbum);
 
     }
   )}
