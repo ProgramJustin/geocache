@@ -21,12 +21,25 @@ export class GeocacheFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  saveGeocacheAddress(geo: GeocacheService,address){
-    this.googlelocationapi.getGpsCoordinates(address);
+  submitForm(geoName: string, address: string, coordinates: string, creator: string) {
+    // var newAlbum: Album = new Album(title, artist, description);
+    // this.albumService.addAlbum(newAlbum);
 
+      this.googlelocationapi.getGpsCoordinates(address).subscribe(response => {
 
+      var lat = response.json().results[0].geometry.location.lat;
+      var lng = response.json().results[0].geometry.location.lng;
+      var location = lat + " " + lng;
+      console.log(response.json().results[0].formatted_address);
+      var newGeocache: Geocache = new Geocache(geoName, address, location, creator);
 
-  }
+      this.albumService.addAlbum(newAlbum);
+
+      // this.geocaches.push(newGeocache);
+      console.log(newAlbum);
+
+    }
+  )}
   getGeocachesAdress(address: string) {
 
     // this.noGeocaches = false;
