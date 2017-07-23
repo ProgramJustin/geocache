@@ -1,5 +1,6 @@
 
-<div *ngFor="let geocache of childGeocaches.geocaches;">
-
-  <button (click)="saveGeocache(geoName, geocacheAddress, results[0].geometry.location.lat, geoCreator)">Save Photo</button>
+<div *ngFor="let geocache of geocaches | async" (click)="goToDetailPage(geocache)" class="panel panel-default">
+  <div class="panel-body">
+    <h3><em>{{geocache.address}}</em> by {{geocache.location}}</h3>
+  </div>
 </div>

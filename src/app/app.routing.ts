@@ -3,12 +3,17 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { GeocacheFormComponent } from './geocache-form/geocache-form.component';
+import { GeocacheListComponent} from './geocache-list/geocache-list.component';
 
 
 const appRoutes: Routes = [
   {
     path: '',
     component: GeocacheFormComponent
+  },
+  {
+    path: 'geolist',
+    component: GeocacheListComponent
   }
 ];
 

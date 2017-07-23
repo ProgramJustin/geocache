@@ -12,11 +12,3 @@
     <label for="camera">Camera</label>
   <button (click)="submitForm(geoName.value,geocacheAddress.value, geoCreator.value); geoName.value=''; geocacheAddress.value='';geoCreator.value=''">Get Address</button>
 </form>
-
-<div *ngIf="geocaches && !noGeocaches">
-  <app-geocache-list [childGeocaches]="geocaches"></app-geocache-list>
-</div>
-
-<div *ngIf="noGeocaches">
-    <h3>{{geocacheAddress.value}}</h3>
-</div>
