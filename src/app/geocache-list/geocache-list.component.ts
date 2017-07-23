@@ -19,7 +19,7 @@ export class GeocacheListComponent {
     this.geocaches = this.geocacheService.getGeocaches();
   }
 
-  getDetailedPage(clickedGeocache){
+  goToDetailPage(clickedGeocache){
     this.router.navigate(['geocaches', clickedGeocache.$key]);
   }
 
