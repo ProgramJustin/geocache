@@ -2,12 +2,12 @@
 
 <form>
   <div class="form-group">
+    <label>Creator</label>
+    <input type="text" #geoCreator>
     <label>name</label>
     <input type="text" #geoName>
     <label>Enter Physical Address or GPS Coordinates</label>
-    <input type=address #geocacheAddress>
-    <label>Creator</label>
-    <input type=address #geoCreator>
+    <input type="text" #geocacheAddress>
   </div>
-  <button (click)="submitForm(geoName.value,geocacheAddress.value, geoCreator.value); geoName.value=''; geocacheAddress.value='';geoCreator.value=''">Get Address</button>
+  <button (click)="submitForm(geoCreator.value, geoName.value,geocacheAddress.value); geoCreator.value=''; geoName.value=''; geocacheAddress.value=''">Get Address</button>
 </form>

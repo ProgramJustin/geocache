@@ -9,47 +9,25 @@ import { GeocacheService } from '../geocache.service';
 @Component({
   selector: 'app-geocache-form',
   templateUrl: './geocache-form.component.html',
-  styleUrls: ['./geocache-form.component.css'],
+  styleUrls: ['./geocache-form.component.scss'],
   providers: [GoogleLocationApiService, GeocacheService]
 })
 export class GeocacheFormComponent implements OnInit {
-
-
-    constructor(private googlelocationapi: GoogleLocationApiService, private geocacheService: GeocacheService){ }
+  constructor(private googlelocationapi: GoogleLocationApiService, private geocacheService: GeocacheService){ }
   ngOnInit() {
   }
 
-  submitForm(geoName: string, address: string, coordinates: string, creator: string) {
-    // var newAlbum: Album = new Album(title, artist, description);
-    // this.albumService.addAlbum(newAlbum);
-
+  submitForm(creator: string,geocache: string, address: string) {
+    alert(creator);
       this.googlelocationapi.getGpsCoordinates(address).subscribe(response => {
+        var lat = response.json().results[0].geometry.location.lat;
+        var lng = response.json().results[0].geometry.location.lng;
+        var location = lat + " " + lng;
+        console.log(response.json().results[0].formatted_address);
+        var newGeocache: Geocache = new Geocache(creator,geocache,address, location);
 
-      var lat = response.json().results[0].geometry.location.lat;
-      var lng = response.json().results[0].geometry.location.lng;
-      var location = lat + " " + lng;
-      console.log(response.json().results[0].formatted_address);
-      var newGeocache: Geocache = new Geocache(geoName, address, location, creator);
+        this.geocacheService.addGeocaches(newGeocache);
 
-      this.geocacheService.addGeocaches(newGeocache);
-
-      // this.geocaches.push(newGeocache);
-
-    }
-  )}
-  getGeocachesAdress(address: string) {
-
-    // this.noGeocaches = false;
-    // this.googlelocationapi.getGpsCoordinates(address).subscribe(response => {
-    //   if(response.json().geocaches.length > 0)
-    // {
-    //   this.geocaches = response.json();
-    // }
-    // else {
-    //   this.noGeocaches = true;
-    // }
-    // });
-  }
-
-
+      }
+    )}
   }

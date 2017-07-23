@@ -6,7 +6,7 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 @Component({
   selector: 'app-user-geocache-list',
   templateUrl: './user-geocache-list.component.html',
-  styleUrls: ['./user-geocache-list.component.css'],
+  styleUrls: ['./user-geocache-list.component.scss'],
   providers: [ GeocacheService ]
 })
 export class UserGeocacheListComponent implements OnInit {

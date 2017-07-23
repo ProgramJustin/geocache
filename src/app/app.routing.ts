@@ -10,7 +10,7 @@ import { GeocacheDetailComponent } from './geocache-detail/geocache-detail.compo
 const appRoutes: Routes = [
   {
     path: '',
-    component: GeocacheFormComponent
+    component: HomeComponent
   },
   {
     path: 'geolist',
@@ -20,10 +20,14 @@ const appRoutes: Routes = [
     path: 'geocaches/:id',
     component: GeocacheDetailComponent
   },
-  // {
-  //   path: 'geocaches/:id',
-  //   component: GeocacheListComponent
-  // }
+  {
+    path: 'about',
+    component: AboutComponent
+  },
+  {
+    path: 'form',
+    component: GeocacheFormComponent
+  }
 ];
 
 

@@ -1,8 +1,8 @@
 { "geocaches": [{
+  "creator": "Justin",
     "geocache": "Area-51",
     "address": "123 area 51 st",
     "gps": "-12 -2 ",
-    "creator": "Justin",
     "id": "1"
   }]
 }
