@@ -1,6 +1,18 @@
 li {
   padding: 20px;
+  list-style: none;
+
+  a {
+    color: white;
+  }
+  a:hover {
+    background-color: transparent;
+  }
 }
 h1 {
   color: tomato;
+}
+.navbar {
+  background-color: darkgreen;
+  border-radius: 0px;
 }
