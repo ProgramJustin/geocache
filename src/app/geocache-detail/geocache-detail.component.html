@@ -1,8 +1,12 @@
 
 <div class="col-md-6">
+  <label>Creator:</label>
   <h3>{{(geocacheToDisplay | async)?.creator}}</h3>
+  <label>Geocache's Name:</label>
   <h3>{{(geocacheToDisplay | async)?.geocache}}</h3>
+  <label>Address:</label>
   <h4>{{(geocacheToDisplay | async)?.address}}</h4>
+  <label>Gps Coordinates:</label>
   <p>{{(geocacheToDisplay | async)?.gps}}</p>
 </div>
 

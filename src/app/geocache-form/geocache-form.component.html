@@ -8,7 +8,7 @@
     <input type="text" #geoName><br />
     <label>Enter Physical Address or GPS Coordinates:</label><br />
     <input type="text" #geocacheAddress><br />
-    <label>If you enter a physical address gps coordinates will be generated for your Geocache, same goes if you were to enter gps coordinates</label><br />
+    <label>If you enter a physical address, gps coordinates will be generated for your Geocache, same goes if you were to enter gps coordinates</label><br />
   </div>
   <button (click)="submitForm(geoCreator.value, geoName.value,geocacheAddress.value); geoCreator.value=''; geoName.value=''; geocacheAddress.value=''">Add Geocache</button>
 </form>
