@@ -27,7 +27,7 @@
 5. CREATE AN api-keys.ts file IN THE APP DIRECTORY.
 6. GO TO [Click here](https://developers.google.com/maps/documentation/geocoding/start) TO GET YOUR API KEY, AND IN YOUR api-keys.ts file TYPE:
 * export const geoKey = "YOUR API-KEY HERE";
-### THIS WILL ADD YOUR GEOCACHE LOCATION ASSUMING YOUR GEOCACHE OBJECTS IN YOUR FIREBASE DATABASE CONTAINS AN address PROPERTY SUCH AS: _geocache.address_
+### THIS WILL ADD YOUR GEOCACHE GOOGLE MAP LOCATION ASSUMING YOUR GEOCACHE OBJECTS IN YOUR FIREBASE DATABASE CONTAINS AN address PROPERTY SUCH AS: _geocache.address_
 7. GO TO [Click here](https://developers.google.com/maps/documentation/embed/get-api-key) TO GET YOUR API KEY, AND IN YOUR api-keys.ts file TYPE:
 * export const googMapKey = "YOUR API-KEY HERE";
 8. TO LAUNCH THIS APPLICATION IN YOUR TERMINAL TYPE: ng serve
