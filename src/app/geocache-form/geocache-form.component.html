@@ -2,12 +2,13 @@
 
 <form>
   <div class="form-group">
-    <label>Creator</label>
-    <input type="text" #geoCreator>
-    <label>name</label>
-    <input type="text" #geoName>
-    <label>Enter Physical Address or GPS Coordinates</label>
-    <input type="text" #geocacheAddress>
+    <label>Creator</label><br />
+    <input type="text" #geoCreator><br />
+    <label>name</label><br />
+    <input type="text" #geoName><br />
+    <label>Enter Physical Address or GPS Coordinates</label><br />
+    <label>If you enter a physical address, gps coordinates will be generated for your Geocache, same if you were to enter gps coordinates</label><br />
+    <input type="text" #geocacheAddress><br />
   </div>
   <button (click)="submitForm(geoCreator.value, geoName.value,geocacheAddress.value); geoCreator.value=''; geoName.value=''; geocacheAddress.value=''">Get Address</button>
 </form>

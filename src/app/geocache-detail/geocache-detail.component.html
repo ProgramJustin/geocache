@@ -4,9 +4,9 @@
   <h3>{{(geocacheToDisplay | async)?.geocache}}</h3>
   <h4>{{(geocacheToDisplay | async)?.address}}</h4>
   <p>{{(geocacheToDisplay | async)?.gps}}</p>
-   <iframe width="600" height="450" frameborder="0" style="border:0"
-   [src]="this.coord" allowfullscreen></iframe>
 </div>
+<iframe *ngIf="this.coord" width="600" height="450" frameborder="0" style="border:0"
+[src]="this.coord" allowfullscreen></iframe>
 
 <!-- "https://geocaches-76e71.firebaseio.com/users/jack/name.json?print=pretty"
 
