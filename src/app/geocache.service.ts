@@ -19,8 +19,9 @@ export class GeocacheService {
     this.geocaches.push(newGeocache);
   }
   getGeocacheById(geocacheId: string){
-    return this.database.object('geocaches/' + geocacheId);
+    return this.database.object('geocaches/' + geocacheId) ;
   }
+
   updateGeocache(localUpdatedGeocache){
     var geocacheEntryInFirebase = this.getGeocacheById(localUpdatedGeocache.$key);
     geocacheEntryInFirebase.update({geocache: localUpdatedGeocache.geocache, address: localUpdatedGeocache.address, gps: localUpdatedGeocache.gps, creator: localUpdatedGeocache.creator});

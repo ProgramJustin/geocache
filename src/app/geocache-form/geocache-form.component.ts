@@ -23,8 +23,9 @@ export class GeocacheFormComponent implements OnInit {
         var lat = response.json().results[0].geometry.location.lat;
         var lng = response.json().results[0].geometry.location.lng;
         var location = lat + " " + lng;
-        console.log(response.json().results[0].formatted_address);
-        var newGeocache: Geocache = new Geocache(creator,geocache,address, location);
+        var formattedAddress = response.json().results[0].formatted_address;
+        console.log(response.json().results[0]);
+        var newGeocache: Geocache = new Geocache(creator,geocache,formattedAddress, location);
 
         this.geocacheService.addGeocaches(newGeocache);
 

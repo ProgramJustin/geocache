@@ -17,4 +17,8 @@ export class GoogleLocationApiService {
 
 }
 
+  getAddress(key) {
+    return this.http.get("https://geocaches-76e71.firebaseio.com/geocaches/" +key+ ".json?print=pretty")
+  }
+
 }

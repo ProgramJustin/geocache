@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { GeocacheService } from '../geocache.service';
 import { Geocache } from '../geocache.model'
 import { FirebaseListObservable } from 'angularfire2/database';
+import { googMapKey } from '../api-keys';
 
 @Component({
   selector: 'app-geocache-list',
@@ -17,10 +18,13 @@ export class GeocacheListComponent {
 
   ngOnInit(){
     this.geocaches = this.geocacheService.getGeocaches();
+    console.log(this.geocaches);
   }
 
   goToDetailPage(clickedGeocache){
     this.router.navigate(['geocaches', clickedGeocache.$key]);
+    
   }
+  // "https://www.google.com/maps/embed/v1/place?q=" +this.geocacheStorage+ "&key=" +googMapKey;
 
 }
