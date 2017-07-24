@@ -1,28 +1,40 @@
-# Geocache
+# _Geocache_
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
+## CONTRIBUTORS: **JUSTIN GOMEZ**
 
-## Development server
+### PROJECT DESCRIPTION:
+* THIS APPLICATION DISPLAYS ALL GEOCACHES THAT USERS HAVE SUBMITTED. THE USER CAN SUBMIT GEOCACHES. WHEN THE USER SUBMITS A LOCATION SUCH AS A PHYSICAL ADDRESS, GPS COORDINATES ARE GENERATED, IF YOU WERE TO SUBMIT GPS COORDINATES A PHYSICAL ADDRESS IS GENERATED AND SAVED TO THE GEOCACHE. A GOOGLE MAP AND THE LOCATION OF A GEOCACHE IS GENERATED WHEN A GEOCACHE IS CLICKED AND THE COMPONENT IS LOADED.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#TECHNOLOGIES USED
 
-## Code scaffolding
+* HTML
+* SASS
+* TYPESCRIPT/JAVASCRIPT
+* ANGULAR
+* NPM
+* BOWER
+* FIREBASE
+* BOOTSTRAP
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+### COMPLETE SET-UP INSTRUCTIONS
 
-## Build
+1. DOWNLOAD OR CLONE FROM GITHUB REPOSITORY [Click here](https://github.com/ProgramJustin/geocache)
+2. TO CLONE, TYPE: git clone https://github.com/ProgramJustin/geocache INTO YOUR TERMINAL AND PRESS "ENTER"
+3. TO RUN THIS APPLICATION INSTALL THE FOLLOWING PACKAGES: npm, bower.
+4. TO INSTALL THESE PACKAGES IN THE PROJECT, IN YOUR TERMINAL NAVIGATE TO THE PROJECT'S DIRECTORY AND TYPE:
+* npm install bower
+* npm install
+5. CREATE AN api-keys.ts file IN THE APP DIRECTORY.
+6. GO TO [Click here](https://developers.google.com/maps/documentation/geocoding/start) TO GET YOUR API KEY, AND IN YOUR api-keys.ts file TYPE:
+* export const geoKey = "YOUR API-KEY HERE";
+7. GO TO [Click here](https://developers.google.com/maps/documentation/embed/get-api-key) TO GET YOUR API KEY, AND IN YOUR api-keys.ts file TYPE:
+* export const googMapKey = "YOUR API-KEY HERE";
+8. TO LAUNCH THIS APPLICATION IN YOUR TERMINAL TYPE: ng serve
+9. AN OTHER WAY TO LAUNCH THIS APPLICATION TYPE: npm start
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+# NEW FEATURES IF GIVEN THE OPPORTUNITY
+* ADD AUTHENTICATION
+* ADD FEATURE THAT DISPLAYS ALL GEOCACHES IN THE LOCAL AREA
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* Copyright 2017, Justin Gomez
